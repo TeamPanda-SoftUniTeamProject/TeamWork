@@ -26,5 +26,19 @@ namespace Website.Controllers
 
             return View();
         }
+
+        public ActionResult Blog()
+        {
+            ViewBag.Message = "Our blog implementation page.";
+
+            return View();
+        }
+
+        public ActionResult Game()
+        {
+            ViewBag.Message = "Game goes here.";
+
+            return View();
+        }
     }
 }
