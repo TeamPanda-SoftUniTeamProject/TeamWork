@@ -331,7 +331,7 @@ button,
 input,
 select[multiple],
 textarea {
-  background-image: none;
+  background-image: url(../Images/homePageTheme.jpg);
 }
 
 a {
@@ -2108,7 +2108,7 @@ fieldset[disabled] .btn-default.active {
 .btn-primary:active,
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
-  background-image: none;
+  background-image:url(../Images/homePageTheme.jpg);
 }
 
 .btn-primary.disabled,
