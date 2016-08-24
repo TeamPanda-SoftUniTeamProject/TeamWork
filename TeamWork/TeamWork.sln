@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Website", "Website\Website.csproj", "{3E2F39EB-BC92-423D-94E4-04EA92952F7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBlog", "..\..\..\Documents\Visual Studio 2015\Projects\MyBlog\MyBlog\MyBlog.csproj", "{45CC4722-72FF-4DBF-8963-22CDC093E059}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBlog", "MyBlog\MyBlog\MyBlog.csproj", "{45CC4722-72FF-4DBF-8963-22CDC093E059}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
