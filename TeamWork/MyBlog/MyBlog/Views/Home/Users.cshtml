@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Users";
+}
+@using Microsoft.Ajax.Utilities
+@model List<MyBlog.Models.ApplicationUser>
+
+
+
+<h2>Users</h2>
+<table class="table">
+    <tr>
+        <th>Email</th>
+
+        <th>Full name</th>
+
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.UserName)</td>
+
+            <td>
+                @if (item.FullName != null)
+                {
+                    @Html.DisplayFor(modelItem => item.FullName)
+                }
+                else
+                {
+                    <i>(no name)</i>
+                }
+
+            </td>
+           @if (item.Id != "f8221205-1cc4-43ad-b239-e221ed982ff1")
+           {
+               <td>@Html.ActionLink("Delete", "DeleteUser", new {id = item.Id})</td>
+           }
+           else
+           {
+            <td><i>This is Administrator.</i></td>
+           }
+
+
+
+        </tr>
+    }
+</table>
