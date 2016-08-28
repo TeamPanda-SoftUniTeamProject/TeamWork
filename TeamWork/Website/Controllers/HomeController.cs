@@ -29,7 +29,7 @@ namespace Website.Controllers
 
         public ActionResult Blog()
         {
-            ViewBag.Message = "Our blog implementation page";
+            ViewBag.Message = "Blog implementation page";
 
             return View();
         }
