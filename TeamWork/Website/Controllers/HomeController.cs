@@ -15,28 +15,28 @@ namespace Website.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Project description page";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Contact page";
 
             return View();
         }
 
         public ActionResult Blog()
         {
-            ViewBag.Message = "Our blog implementation page.";
+            ViewBag.Message = "Our blog implementation page";
 
             return View();
         }
 
         public ActionResult Game()
         {
-            ViewBag.Message = "Game goes here.";
+            ViewBag.Message = "Game";
 
             return View();
         }
