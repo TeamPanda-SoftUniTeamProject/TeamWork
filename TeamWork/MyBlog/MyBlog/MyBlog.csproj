@@ -215,10 +215,6 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\aspnet-MyBlog-20160815053336.mdf" />
-    <Content Include="App_Data\aspnet-MyBlog-20160815053336_log.ldf">
-      <DependentUpon>aspnet-MyBlog-20160815053336.mdf</DependentUpon>
-    </Content>
     <Content Include="Content\bootstrap-cerulean.css" />
     <Content Include="Content\bootstrap-cosmo.css" />
     <Content Include="Content\bootstrap-cyborg.css" />
@@ -302,7 +298,9 @@
     <Content Include="Views\Home\Users.cshtml" />
     <Content Include="Views\Home\DeleteUser.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
