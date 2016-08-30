@@ -1,8 +1,10 @@
 ﻿
 @{
     ViewBag.Title = "Users";
+    bool isPreviousLinkVisible = ViewBag.IsPreviousLinkVisible ?? false;
+    bool isNextLinkVisible = ViewBag.IsNextLinkVisible ?? false;
 }
-@using Microsoft.Ajax.Utilities
+
 @model List<MyBlog.Models.ApplicationUser>
 
 
@@ -33,7 +35,7 @@
                 }
 
             </td>
-           @if (item.Id != "f8221205-1cc4-43ad-b239-e221ed982ff1")
+           @if (item.FullName!= "System Administrator")
            {
                <td>@Html.ActionLink("Delete", "DeleteUser", new {id = item.Id})</td>
            }
@@ -47,3 +49,11 @@
         </tr>
     }
 </table>
+@if (isPreviousLinkVisible)
+{
+    <a id="previousLink" href="@Href("~/Home/Users/" + (ViewBag.PageNumber - 1))">&lt; Previous Page</a>
+}
+@if (isNextLinkVisible)
+{
+    <a id="nextLink" href="@Href("~/Home/Users/"+(ViewBag.PageNumber+1))">Next Page &gt;</a>
+}

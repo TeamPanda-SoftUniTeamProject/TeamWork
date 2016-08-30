@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -14,16 +15,24 @@ namespace MyBlog.Controllers
     public class HomeController : BaseController
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+        private const int UserPerPage = 10;
+
         public ActionResult Index()
         {
             var posts = db.Posts.Include(p => p.Author).OrderByDescending(p => p.Date).Take(6);
             return View(posts.ToList());
         }
         [Authorize(Roles = "Administrators")]
-        public ActionResult Users()
+        public ActionResult Users(int? id)
         {
-            var users = db.Users.OrderBy(u => u.UserName);
-            return View(users.ToList());
+            int pageNumber = id ?? 0;
+            IEnumerable<ApplicationUser> users = (from user in db.Users.OrderBy(u => u.UserName) select user)
+                .Skip(pageNumber * UserPerPage).Take(UserPerPage + 1);
+            ViewBag.IsPreviousLinkVisible = pageNumber > 0;
+            ViewBag.IsNextLinkVisible = users.Count() > UserPerPage;
+            ViewBag.PageNumber = pageNumber;
+            //var userse = db.Users.OrderBy(u => u.UserName);
+            return View(users.Take(UserPerPage).ToList());
         }
         [Authorize(Roles = "Administrators")]
         public ActionResult DeleteUser(string id)
@@ -35,6 +44,7 @@ namespace MyBlog.Controllers
             var user = db.Users.SingleOrDefault(u=>u.Id==id);
             return View(user);
         }
+
         [HttpPost, ActionName("DeleteUser")]
         [Authorize(Roles = "Administrators")]
         [ValidateAntiForgeryToken]
