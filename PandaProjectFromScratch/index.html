@@ -1,33 +1,22 @@
-﻿
-
-@{
-    ViewBag.Title = "Game";
-    
-}
-
-<br />
-
-<h2>The Game</h2>
-<h3>By Team Panda HotF(i)X</h3>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Panda Game</title>
-    <script src="../../Scripts/jquery-1.10.2.js" type="text/javascript"></script>
-    <script src="../../Scripts/keyboard.js" type="text/javascript"></script>
-    <script src="../../Scripts/utility.js" type="text/javascript"></script>
-    <script src="../../Scripts/canvas.js" type="text/javascript"></script>
-    <script src="../../Scripts/animate.js" type="text/javascript"></script>
-    <script src="../../Scripts/spritesheet.js" type="text/javascript"></script>
-    <script src="../../Scripts/sprite.js" type="text/javascript"></script>
-    <script src="../../Scripts/world.js" type="text/javascript"></script>
-    //
-    <script src="../../Scripts/point.js" type="text/javascript"></script>
-    //
-    //<script src="../../Scripts/segment.js" type="text/javascript"></script>
-    
-    //<script src="../../Scripts/collision.js" type="text/javascript"></script>
-    //
-    <script src="../../Scripts/vector.js" type="text/javascript"></script>
+    <script src="jquery-3.1.0.js" type="text/javascript"></script>
+    <script src="keyboard.js" type="text/javascript"></script>
+    <script src="utility.js" type="text/javascript"></script>
+    <script src="canvas.js" type="text/javascript"></script>
+    <script src="animate.js" type="text/javascript"></script>
+    <script src="spritesheet.js" type="text/javascript"></script>
+    <script src="sprite.js" type="text/javascript"></script>
+    <script src="world.js" type="text/javascript"></script>
+    //<script src="point.js" type="text/javascript"></script>
+    //<script src="segment.js" type="text/javascript"></script>
+    //<script src="collision.js" type="text/javascript"></script>
+    //<script src="vector.js" type="text/javascript"></script>
+
+
 
     <script language="JavaScript">
 
@@ -40,7 +29,7 @@
         var panda_moving = false;
 
 
-        var spritesheet = new Spritesheet("../../Images/pandaSpriteSheetTester.png");
+        var spritesheet = new Spritesheet("images/pandaSpriteSheetTester.png");
         var ground = new Sprite(spritesheet);
         var grass = new Sprite(spritesheet);
         var mushroom = new Sprite(spritesheet);
@@ -114,5 +103,8 @@
     </script>
 </head>
 <body>
+
     <canvas id="game"></canvas>
+
 </body>
+</html>
